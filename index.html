@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KlimaatAtelier Voorbeeld | Installateur Amsterdam</title>
+  <meta name="description" content="KlimaatAtelier - Uw specialist in CV-ketels, warmtepompen, airco en vloerverwarming in Amsterdam. Vakkundig en betrouwbaar.">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo">Klimaat<span>Atelier</span></a>
+  <ul class="nav-links">
+    <li><a href="#diensten">Diensten</a></li>
+    <li><a href="#projecten">Projecten</a></li>
+    <li><a href="#over-ons">Over ons</a></li>
+    <li><a href="blog.html">Blog</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Gratis advies</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <i data-lucide="thermometer" style="width:14px;height:14px;"></i>
+      Gecertificeerde installateurs
+    </div>
+    <h1>Klimaatcomfort op <em>maat gemaakt</em></h1>
+    <p>Van CV-ketel tot warmtepomp, van airconditioning tot vloerverwarming. Wij zorgen voor het perfecte binnenklimaat in uw woning of bedrijfspand in Amsterdam.</p>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn-primary">Offerte aanvragen</a>
+      <a href="#diensten" class="btn-outline">Onze diensten</a>
+    </div>
+  </div>
+</section>
+  <div class="ticker" style="background:var(--color-accent,#f5a623);padding:12px 0;overflow:hidden;">
+    <div style="display:flex;gap:48px;animation:tickerScroll 20s linear infinite;white-space:nowrap;">
+      <span><iconify-icon icon="lucide:thermometer"></iconify-icon> CV-ketel</span><span><iconify-icon icon="lucide:wind"></iconify-icon> Warmtepomp</span><span><iconify-icon icon="lucide:snowflake"></iconify-icon> Airco</span><span><iconify-icon icon="lucide:waves"></iconify-icon> Vloerverwarming</span><span><iconify-icon icon="lucide:sun"></iconify-icon> Zonneboiler</span><span><iconify-icon icon="lucide:wrench"></iconify-icon> Onderhoud</span><span><iconify-icon icon="lucide:thermometer"></iconify-icon> CV-ketel</span><span><iconify-icon icon="lucide:wind"></iconify-icon> Warmtepomp</span><span><iconify-icon icon="lucide:snowflake"></iconify-icon> Airco</span><span><iconify-icon icon="lucide:waves"></iconify-icon> Vloerverwarming</span><span><iconify-icon icon="lucide:sun"></iconify-icon> Zonneboiler</span><span><iconify-icon icon="lucide:wrench"></iconify-icon> Onderhoud</span>
+    </div>
+  </div>
+  <style>@keyframes tickerScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}</style>
+  <style>.ticker span{display:inline-flex;align-items:center;gap:8px;font-size:0.85rem;font-weight:700;color:var(--color-bg,#0a0a0f);text-transform:uppercase;letter-spacing:0.05em;}</style>
+
+
+<!-- SCROLL VIDEO -->
+<section class="scroll-video-section" id="scrollVideo">
+  <canvas id="frameCanvas"></canvas>
+</section>
+
+
+  <!-- ======================== BEFORE / AFTER ======================== -->
+  <section class="ba-section" style="height:100vh;position:relative;overflow:hidden;background:#000;">
+    <div style="width:100%;height:100%;position:relative;">
+      <img src="images/craft.jpg" alt="Na" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;">
+      <img src="images/hero.jpg" alt="Voor" id="baBefore" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2;">
+      <div id="baLabel" style="position:absolute;z-index:3;bottom:10%;left:50%;transform:translateX(-50%);text-align:center;opacity:0;">
+        <span style="display:inline-block;background:var(--color-accent,#C1FF72);color:#0a0a0a;padding:8px 20px;border-radius:99px;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px;">Scroll om te zien</span>
+        <h2 style="font-size:clamp(2rem,5vw,3.5rem);font-weight:900;line-height:1.15;color:#fff;text-shadow:0 4px 20px rgba(0,0,0,0.6);">Van oud naar <em style="color:var(--color-accent,#C1FF72);">nieuw</em></h2>
+      </div>
+    </div>
+  </section>
+<!-- SERVICES -->
+<section class="services" id="diensten">
+  <div class="container">
+    <div class="section-label">Wat wij doen</div>
+    <h2 class="section-title">Onze specialisaties</h2>
+    <p class="section-sub">Met jarenlange ervaring leveren wij totaaloplossingen voor elk klimaatvraagstuk.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon"><i data-lucide="thermometer"></i></div>
+        <h3>CV-ketel</h3>
+        <p>Installatie, vervanging en onderhoud van alle merken CV-ketels. Energiezuinig en altijd warm water.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i data-lucide="wind"></i></div>
+        <h3>Warmtepomp</h3>
+        <p>Hybride en volledig elektrische warmtepompen. De duurzame keuze voor verwarming en koeling.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i data-lucide="snowflake"></i></div>
+        <h3>Airconditioning</h3>
+        <p>Split- en multi-split systemen voor optimale koeling in de zomer en verwarming in de winter.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i data-lucide="waves"></i></div>
+        <h3>Vloerverwarming</h3>
+        <p>Natte en droge systemen voor gelijkmatige warmteverdeling. Comfortabel en energiebesparend.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i data-lucide="sun"></i></div>
+        <h3>Zonneboiler</h3>
+        <p>Warm water dankzij zonne-energie. Verlaag uw gasrekening en maak uw woning toekomstbestendig.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i data-lucide="wrench"></i></div>
+        <h3>Onderhoud</h3>
+        <p>Periodiek onderhoud en storingsdienst. Voorkom problemen en verleng de levensduur van uw installatie.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects" id="projecten">
+  <div class="container">
+    <div class="section-label">Recent werk</div>
+    <h2 class="section-title">Projecten in Amsterdam</h2>
+    <p class="section-sub">Een greep uit onze recent opgeleverde installaties.</p>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="images/project1.jpg" alt="Warmtepomp installatie grachtenpand">
+        <div class="project-info">
+          <h3>Grachtenpand Jordaan</h3>
+          <p>Hybride warmtepomp + vloerverwarming</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="images/project2.jpg" alt="CV-ketel renovatie Amsterdam">
+        <div class="project-info">
+          <h3>Appartementencomplex Zuid</h3>
+          <p>12 CV-ketels vervangen in 3 dagen</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="images/kitchen.jpg" alt="Airco installatie kantoor">
+        <div class="project-info">
+          <h3>Kantoorpand Zuidas</h3>
+          <p>Multi-split airco voor 8 ruimtes</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="images/detail.jpg" alt="Zonneboiler systeem">
+        <div class="project-info">
+          <h3>Vrijstaande woning Amstelveen</h3>
+          <p>Zonneboiler + vloerverwarming</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="over-ons">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image">
+        <img src="images/about.jpg" alt="KlimaatAtelier team aan het werk">
+      </div>
+      <div>
+        <div class="section-label">Over ons</div>
+        <h2>Vakmanschap met <span>passie</span></h2>
+        <p>KlimaatAtelier is opgericht uit liefde voor het vak. Wij geloven dat een goed binnenklimaat de basis is van wooncomfort. Ons team van gecertificeerde installateurs staat klaar om samen met u de beste oplossing te vinden.</p>
+        <p>Wij werken uitsluitend met A-merken en bieden op elke installatie minimaal 5 jaar garantie. Van advies tot oplevering, wij begeleiden u in elk stap.</p>
+        <div class="stat-row">
+          <div class="stat">
+            <h4>15+</h4>
+            <p>Jaar ervaring</p>
+          </div>
+          <div class="stat">
+            <h4>2.400+</h4>
+            <p>Installaties</p>
+          </div>
+          <div class="stat">
+            <h4>4.9</h4>
+            <p>Google score</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery">
+  <div class="container">
+    <div class="section-label">Ons werk</div>
+    <h2 class="section-title" style="margin-bottom:40px;">Op locatie</h2>
+  </div>
+  <div class="gallery-track" id="galleryTrack">
+    <img src="images/craft.jpg" alt="Installateur aan het werk">
+    <img src="images/team.jpg" alt="Ons team">
+    <img src="images/carousel.jpg" alt="Werkplaats">
+    <img src="images/project1.jpg" alt="Opgeleverd project">
+    <img src="images/hero.jpg" alt="Klimaattechniek">
+    <img src="images/craft.jpg" alt="Vakmanschap">
+    <img src="images/team.jpg" alt="Samenwerking">
+    <img src="images/carousel.jpg" alt="Gereedschap">
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <div class="container">
+    <h2>Klaar voor een beter <span>binnenklimaat</span>?</h2>
+    <p>Neem vandaag nog contact op voor een vrijblijvend adviesgesprek. Wij komen graag bij u langs voor een gratis inspectie.</p>
+    <a href="#" class="btn-primary">Plan een afspraak</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Klimaat<span>Atelier</span></div>
+        <p>Uw specialist in klimaattechniek in Amsterdam en omstreken. Betrouwbaar, vakkundig en altijd eerlijk advies.</p>
+      </div>
+      <div>
+        <h4>Diensten</h4>
+        <ul>
+          <li><a href="#">CV-ketel</a></li>
+          <li><a href="#">Warmtepomp</a></li>
+          <li><a href="#">Airconditioning</a></li>
+          <li><a href="#">Vloerverwarming</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Bedrijf</h4>
+        <ul>
+          <li><a href="#over-ons">Over ons</a></li>
+          <li><a href="#projecten">Projecten</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#">Amsterdam</a></li>
+          <li><a href="#">info@klimaatatelier.nl</a></li>
+          <li><a href="#">020 - 123 45 67</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 KlimaatAtelier Voorbeeld. Alle rechten voorbehouden.
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  lucide.createIcons();
+
+  /* --- NAV SCROLL --- */
+  var nav = document.getElementById('nav');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 60) { nav.classList.add('scrolled'); }
+    else { nav.classList.remove('scrolled'); }
+  });
+
+  /* --- HERO ANIMATIONS --- */
+  gsap.from('.hero-badge', { opacity: 0, y: 30, duration: 0.8, delay: 0.3 });
+  gsap.from('.hero h1', { opacity: 0, y: 40, duration: 1, delay: 0.5 });
+  gsap.from('.hero p', { opacity: 0, y: 30, duration: 0.8, delay: 0.7 });
+  gsap.from('.hero-buttons', { opacity: 0, y: 20, duration: 0.8, delay: 0.9 });
+
+  /* --- SCROLL VIDEO (121 frames) --- */
+  var canvas = document.getElementById('frameCanvas');
+  var ctx = canvas.getContext('2d');
+  var frameCount = 121;
+  var images = [];
+  var currentFrame = { value: 0 };
+  var loaded = 0;
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+
+  function drawFrame(index) {
+    var idx = Math.min(Math.max(Math.round(index), 0), frameCount - 1);
+    if (images[idx] && images[idx].complete && images[idx].naturalWidth > 0) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      var hRatio = canvas.width / images[idx].naturalWidth;
+      var vRatio = canvas.height / images[idx].naturalHeight;
+      var ratio = Math.max(hRatio, vRatio);
+      var cx = (canvas.width - images[idx].naturalWidth * ratio) / 2;
+      var cy = (canvas.height - images[idx].naturalHeight * ratio) / 2;
+      ctx.drawImage(images[idx], 0, 0, images[idx].naturalWidth, images[idx].naturalHeight,
+        cx, cy, images[idx].naturalWidth * ratio, images[idx].naturalHeight * ratio);
+    }
+  }
+
+  for (var i = 0; i < frameCount; i++) {
+    var img = new Image();
+    img.src = 'images/frames/frame-' + String(i).padStart(3, '0') + '.jpg';
+    images.push(img);
+    img.onload = function() {
+      loaded++;
+      if (loaded === 1) { drawFrame(0); }
+    };
+  }
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.to(currentFrame, {
+    value: frameCount - 1,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '#scrollVideo',
+      start: 'top top',
+      end: '+=600%',
+      scrub: 1,
+      pin: true
+    },
+    onUpdate: function() {
+      drawFrame(currentFrame.value);
+    }
+  });
+
+  /* --- SERVICE CARDS --- */
+  gsap.utils.toArray('.service-card').forEach(function(card, i) {
+    gsap.from(card, {
+      scrollTrigger: { trigger: card, start: 'top 85%' },
+      opacity: 0, y: 50, duration: 0.7, delay: i * 0.1
+    });
+  });
+
+  /* --- PROJECT CARDS --- */
+  gsap.utils.toArray('.project-card').forEach(function(card, i) {
+    gsap.from(card, {
+      scrollTrigger: { trigger: card, start: 'top 85%' },
+      opacity: 0, scale: 0.95, duration: 0.8, delay: i * 0.15
+    });
+  });
+
+  /* --- ABOUT --- */
+  gsap.from('.about-image', {
+    scrollTrigger: { trigger: '.about', start: 'top 70%' },
+    opacity: 0, x: -60, duration: 1
+  });
+  gsap.from('.about-grid > div:last-child', {
+    scrollTrigger: { trigger: '.about', start: 'top 70%' },
+    opacity: 0, x: 60, duration: 1, delay: 0.2
+  });
+
+  /* --- STATS COUNTER --- */
+  gsap.utils.toArray('.stat h4').forEach(function(stat) {
+    var text = stat.textContent;
+    var num = parseFloat(text.replace(/[^0-9.]/g, ''));
+    var suffix = text.replace(/[0-9.]/g, '');
+    gsap.from(stat, {
+      scrollTrigger: { trigger: stat, start: 'top 85%' },
+      textContent: 0,
+      duration: 2,
+      snap: { textContent: num > 100 ? 1 : 0.1 },
+      onUpdate: function() {
+        var val = parseFloat(stat.textContent);
+        if (num > 100) { stat.textContent = Math.round(val).toLocaleString('nl-NL') + suffix; }
+        else { stat.textContent = val.toFixed(1) + suffix; }
+      }
+    });
+  });
+
+  /* --- GALLERY SCROLL --- */
+  gsap.to('#galleryTrack', {
+    x: function() { return -(document.getElementById('galleryTrack').scrollWidth - window.innerWidth + 48); },
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '.gallery',
+      start: 'top 60%',
+      end: 'bottom top',
+      scrub: 1
+    }
+  });
+
+  /* --- CTA --- */
+  gsap.from('.cta h2', {
+    scrollTrigger: { trigger: '.cta', start: 'top 80%' },
+    opacity: 0, y: 40, duration: 0.8
+  });
+  gsap.from('.cta p', {
+    scrollTrigger: { trigger: '.cta', start: 'top 80%' },
+    opacity: 0, y: 30, duration: 0.8, delay: 0.2
+  });
+});
+</script>
+
+    // Before/After slider
+    (function() {
+      var before = document.getElementById('baBefore');
+      var label = document.getElementById('baLabel');
+      if (!before || typeof gsap === 'undefined') return;
+      gsap.registerPlugin(ScrollTrigger);
+      var tl = gsap.timeline({
+        scrollTrigger: { trigger: '.ba-section', start: 'top top', end: '+=200%', pin: true, scrub: 0.5, anticipatePin: 1 }
+      });
+      tl.fromTo(before, { clipPath: 'inset(0 0 0 0)' }, { clipPath: 'inset(0 100% 0 0)', duration: 1, ease: 'none' });
+      tl.fromTo(label, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 0.5);
+    })();
+
+</body>
+</html>
